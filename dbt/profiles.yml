@@ -1,0 +1,12 @@
+orders_pipeline:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: warehouse-db
+      port: 5432
+      user: warehouse
+      password: warehouse
+      dbname: warehouse
+      schema: analytics
+      threads: 2

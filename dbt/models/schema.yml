@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: staging
+    schema: staging
+    tables:
+      - name: orders_staging
+
+models:
+  - name: daily_revenue
+    description: Revenue and order count per day, completed orders only
+    columns:
+      - name: order_date
+        description: One row per day
+        tests:
+          - unique
+          - not_null
+      - name: total_revenue
+        tests:
+          - not_null

@@ -1,0 +1,10 @@
+name: orders_pipeline
+version: "1.0.0"
+config-version: 2
+profile: orders_pipeline
+
+model-paths: ["models"]
+
+models:
+  orders_pipeline:
+    +materialized: table
